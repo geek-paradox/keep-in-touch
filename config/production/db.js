@@ -1,6 +1,6 @@
-const mongoUser = 'admin';
-const mongoPassword = 'admin';
+const mongoUser = 'phoenix';
+const mongoPassword = '6YvjRq2ypX6jHHca';
 
 module.exports = {
-	mongoServer: `mongodb+srv://${mongoUser}:${mongoPassword}@geekparadox-octjb.gcp.mongodb.net/popcorn?retryWrites=true&w=majority`
+	mongoServer: `mongodb+srv://${mongoUser}:${mongoPassword}@geekparadox.mmr1h.gcp.mongodb.net/keepintouch?retryWrites=true&w=majority`
 };
