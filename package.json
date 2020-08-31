@@ -1,43 +1,54 @@
 {
-  "name": "popcorn-api",
+  "name": "keep-in-touch",
   "version": "1.0.0",
-  "description": "Crawl imdb data and let user search",
+  "description": "Keeps you connected",
   "main": "app.js",
   "scripts": {
     "start": "nodemon app",
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "./node_modules/.bin/mocha --recursive  --timeout 5000 --exit",
     "lint": "eslint --fix ."
   },
   "pre-commit": [
-    "lint"
+    "lint",
+    "test"
   ],
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/geek-paradox/popcorn-api.git"
+    "url": "git+ssh://git@github.com/geek-paradox/keep-in-touch.git"
   },
   "keywords": [
-    "imdb"
+    "bond",
+    "graphql",
+    "koa",
+    "mongodb"
   ],
   "author": "geek-paradox",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/geek-paradox/popcorn-api/issues"
+    "url": "https://github.com/geek-paradox/keep-in-touch/issues"
   },
-  "homepage": "https://github.com/geek-paradox/popcorn-api#readme",
+  "homepage": "https://github.com/geek-paradox/keep-in-touch#readme",
   "dependencies": {
     "graphql": "^14.3.1",
+    "graphql-import": "^1.0.2",
+    "graphql-tools": "^6.1.0",
     "koa": "^2.7.0",
     "koa-body": "^4.1.0",
     "koa-graphql": "^0.8.0",
     "koa-mount": "^4.0.0",
     "koa-router": "^7.4.0",
     "lodash": "^4.17.11",
+    "moment": "^2.27.0",
+    "moment-timezone": "^0.5.31",
     "mongoose": "^5.6.0"
   },
   "devDependencies": {
+    "chai": "^4.2.0",
     "eslint": "^5.9.0",
     "jshint": "^2.9.5",
+    "mocha": "^7.2.0",
     "nodemon": "^1.19.1",
-    "pre-commit": "^1.2.2"
+    "pre-commit": "^1.2.2",
+    "sinon": "^9.0.3"
   }
 }
