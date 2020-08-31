@@ -7,20 +7,14 @@ type User {
 	email: String,
 	phone: String,
 	image: String,
-	preferredGenreIds: [String],
-	preferredGenres: [Genre],
-	movieIdsCollection: [String],
-	moviesCollection: [Movie],
-	movieIdsWishlist: [String],
-	moviesWishlist: [Movie],
-	movieIdsWatched: [String],
-	moviesWatched: [Movie],
+	contacts: [Contact],
+	temporaryUser: Boolean
 }
 
 extend type Query {
 	user(id: String!): User
 	users(
-		id: [Int],
+		id: [String],
 		name: [String],
 		country: String,
 		limit: Int,
@@ -36,10 +30,6 @@ extend type Mutation {
 		email: String!,
 		phone: String!,
 		image: String,
-		preferredGenreIds: [String],
-		movieIdsCollection: [String],
-		movieIdsWishlist: [String],
-		movieIdsWatched: [String],
 	): User
 
 	updateUser(
@@ -51,10 +41,6 @@ extend type Mutation {
 		email: String,
 		phone: String,
 		image: String,
-		preferredGenreIds: [String],
-		movieIdsCollection: [String],
-		movieIdsWishlist: [String],
-		movieIdsWatched: [String],
 	): User
 
 	deleteUser(id: String!): String
