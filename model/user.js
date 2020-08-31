@@ -1,5 +1,6 @@
 const mongoose = require('mongoose');
 
+// TODO: retain only schema here, all processing move to seperate file
 const UserSchema = new mongoose.Schema({
 	name: String,
 	username: Number,
@@ -8,10 +9,7 @@ const UserSchema = new mongoose.Schema({
 	email: String,
 	phone: String,
 	image: String,
-	preferredGenreIds: [String],
-	movieIdsCollection: [String],
-	movieIdsWishlist: [String],
-	movieIdsWatched: [String],
+	contacts: [String],
 });
 
 module.exports = mongoose.model('User', UserSchema);

@@ -1,10 +1,8 @@
 const relativePath = './';
-const Genre = require(relativePath + 'genre');
-const Movie = require(relativePath + 'movie');
+const Contact = require(relativePath + 'contact');
 const User = require(relativePath + 'user');
 
 module.exports = {
-	Genre,
-	Movie,
+	Contact,
 	User,
 };
