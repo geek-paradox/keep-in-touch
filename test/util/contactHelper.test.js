@@ -2,7 +2,7 @@ const expect = require('chai').expect;
 const moment = require('moment-timezone');
 const sinon = require('sinon');
 
-const contactHelper = require('../../lib/contact/helper');
+const contactHelper = require('../../util/helper');
 
 describe('getNextContactTime', () => {
 	const now = new Date('2020-09-01T08:00:00.197Z'); //GMT
