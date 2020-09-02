@@ -1,12 +1,12 @@
-const mongoose = require('mongoose');
-
-const ContactSchema = new mongoose.Schema({
+module.exports = {
 	userId: String,
 	contactId: String,
+	contactName: String,
+	contactImage: String,
 	intervalInDays: Number,
 	hour: String,
 	timezone: String,
 	scheduledTime: String,
-});
-
-module.exports = mongoose.model('Contact', ContactSchema);
+	createdAt: String,
+	updatedAt: String,
+};

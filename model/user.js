@@ -1,7 +1,4 @@
-const mongoose = require('mongoose');
-
-// TODO: retain only schema here, all processing move to seperate file
-const UserSchema = new mongoose.Schema({
+module.exports = {
 	name: String,
 	username: Number,
 	password: String,
@@ -9,7 +6,6 @@ const UserSchema = new mongoose.Schema({
 	email: String,
 	phone: String,
 	image: String,
-	contacts: [String],
-});
-
-module.exports = mongoose.model('User', UserSchema);
+	createdAt: String,
+	updatedAt: String,
+};
