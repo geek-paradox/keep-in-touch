@@ -1,4 +1,4 @@
-type Contact	{
+type Contact {
 	id: ID,
 	userId: String,
 	contactId: String,
@@ -12,9 +12,9 @@ extend type Query {
 	contact(id: String!): Contact
 
 	contacts(
-		id: [String],
 		userId: String,
-		first: Int,
+		contactId: String,
+		limit: Int,
 		after: String,
 	): [Contact]
 }
