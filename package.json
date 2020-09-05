@@ -12,6 +12,9 @@
     "lint",
     "test"
   ],
+  "engines": {
+    "node": ">=8.17.0"
+  },
   "repository": {
     "type": "git",
     "url": "git+ssh://git@github.com/geek-paradox/keep-in-touch.git"
@@ -31,7 +34,7 @@
   "dependencies": {
     "graphql": "^14.3.1",
     "graphql-import": "^1.0.2",
-    "graphql-tools": "^6.1.0",
+    "graphql-tools": "^4.0.5",
     "koa": "^2.7.0",
     "koa-body": "^4.1.0",
     "koa-graphql": "^0.8.0",

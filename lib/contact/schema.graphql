@@ -1,4 +1,4 @@
-type Contact	{
+type Contact {
 	id: ID,
 	userId: String,
 	contactId: String,
