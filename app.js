@@ -17,7 +17,7 @@ const listenServer = (app) => {
 	const port = config.port;
 	return new Promise((resolve) => {
 		app.listen(port, () => {
-			console.log(`Server listening on ${port}`);
+			console.log(`Env: ${process.env.NODE_ENV} Server listening on ${port}`);
 			resolve(port);
 		});
 	});
