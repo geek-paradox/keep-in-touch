@@ -2,14 +2,16 @@ const moment = require('moment-timezone');
 
 const helper = {
 	/**
-	 * @param {Number} intervalInDays
-	 * @param {String} hour
-	 * @param {String} timezone
-	 * @param {Number} scheduledTime
+	 * @param {Object} contact
+	 * @param {Number} contact.intervalInDays
+	 * @param {String} contact.hour
+	 * @param {String} contact.timezone
+	 * @param {Number} contact.scheduledTime
 	 * @param {Boolean} systemCall
 	 * @return {Number}
 	 */
-	getNextContactTime: (intervalInDays, hour, timezone, scheduledTime, systemCall = false) => {
+	getNextContactTime: (contact, systemCall = false) => {
+		const {intervalInDays, hour, timezone, scheduledTime} = contact;
 		const scheduledTimeMoment = scheduledTime && moment.tz(scheduledTime, timezone);
 		const currentTimeMoment = moment.tz(Date.now(), timezone);
 		const lastTimeMoment = scheduledTimeMoment || currentTimeMoment;
