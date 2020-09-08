@@ -6,7 +6,8 @@
   "scripts": {
     "start": "nodemon app",
     "test": "./node_modules/.bin/mocha --recursive  --timeout 5000 --exit",
-    "lint": "eslint --fix ."
+    "lint": "eslint --fix .",
+    "hstart": "heroku local web"
   },
   "pre-commit": [
     "lint",
@@ -51,6 +52,7 @@
     "jshint": "^2.9.5",
     "mocha": "^7.2.0",
     "nodemon": "^1.19.1",
+    "pm2": "^4.4.1",
     "pre-commit": "^1.2.2",
     "sinon": "^9.0.3"
   }

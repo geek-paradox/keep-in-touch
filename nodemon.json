@@ -13,7 +13,7 @@
   },
   "watch": ["package.json", "api/", "config/", "lib/", "model/", "routes/", "util/"],
   "env": {
-    "NODE_ENV": "DEVELOPMENT",
+    "NODE_ENV": "development",
     "DEBUG": "*"
   },
   "ext": "js,json,graphql"
