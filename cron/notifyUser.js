@@ -24,7 +24,7 @@ const notifyUser = async () => {
 		} else {
 			after = contacts[len - 1]._id;
 		}
-		for (let contact in contacts) {
+		for (let contact of contacts) {
 			// send notifications
 			contact.scheduledTime = helper.getNextContactTime(contact, true);
 			await contactStore.updateContact(contact);
