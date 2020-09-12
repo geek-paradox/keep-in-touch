@@ -1,5 +1,7 @@
+require('dotenv').config();
 const graphqlHTTP = require('koa-graphql');
 const Koa = require('koa');
+const koaBody = require('koa-body');
 const mongoose = require('mongoose');
 const Router = require('koa-router');
 
@@ -9,6 +11,7 @@ const schema = require('./lib/graphql');
 const app = new Koa();
 const router = new Router();
 
+app.use(koaBody());
 router.post('/graphql', graphqlHTTP({schema, graphiql: true}));
 app.use(router.routes());
 app.use(router.allowedMethods());
