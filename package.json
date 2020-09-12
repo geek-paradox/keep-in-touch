@@ -34,6 +34,8 @@
   },
   "homepage": "https://github.com/geek-paradox/keep-in-touch#readme",
   "dependencies": {
+    "dotenv": "^8.2.0",
+    "firebase-admin": "^9.1.1",
     "graphql": "^14.3.1",
     "graphql-import": "^1.0.2",
     "graphql-tools": "^4.0.5",
