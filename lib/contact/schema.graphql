@@ -22,13 +22,17 @@ extend type Query {
 extend type  Mutation {
 	createContact(
 		userId: String!,
-		contactId: String!,
+		contactPhoneNo: String!,
+		contactName: String,
+		contactImage: String,
 		intervalInDays: Int!,
 		hour: String!,
 	): Contact
 
 	updateContact(
 		id: String!,
+		contactName: String,
+		contactImage: String,
 		intervalInDays: Int!,
 		hour: String!
 	): Contact
