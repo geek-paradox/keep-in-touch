@@ -1,6 +1,7 @@
 const moment = require('moment-timezone');
 const contactStore = require('../lib/contact/store');
 const helper = require('../util/helper');
+const notification = require('../lib/firebase/notification');
 
 const maxSize = 20;
 
@@ -24,8 +25,8 @@ const notifyUser = async () => {
 		} else {
 			after = contacts[len - 1]._id;
 		}
+		notification.sendPushToContacts(Object.assign([], contacts));
 		for (let contact of contacts) {
-			// send notifications
 			contact.scheduledTime = helper.getNextContactTime(contact, true);
 			await contactStore.updateContact(contact);
 		}

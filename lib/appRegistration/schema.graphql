@@ -1,0 +1,33 @@
+type AppRegistration {
+	id: ID,
+	userId: String,
+	registrationToken: String,
+	status: Boolean,
+	user: User,
+}
+
+extend type Query {
+	appRegistration(id: String!): AppRegistration
+
+	appRegistrationByToken(token: String!): AppRegistration
+
+	appRegistrations(
+		userId: String,
+		limit: Int,
+		after: String,
+	): [AppRegistration]
+}
+
+extend type  Mutation {
+	createAppRegistration(
+		userId: String!,
+		registrationToken: String!,
+	): AppRegistration
+
+	updateAppRegistration(
+		id: String!,
+		registrationToken: String!,
+	): AppRegistration
+
+	deleteAppRegistration(id: String!): String
+}
